@@ -3,6 +3,7 @@ import OfferListModule from "./OfferListModule";
 import { OfferListContextProvider } from "../context/offer-list-context";
 import { InputHandler } from "../input-handler/input-handler";
 import { revalidatePath } from "next/cache";
+import { Button } from "react-bootstrap";
 
 const OfferListWrapper = async () => {
   console.log("OfferListWrapper");
@@ -19,7 +20,7 @@ const OfferListWrapper = async () => {
           <OfferListModule />
         </Suspense>
         <form action={checkIfOfferUpdated}>
-          <button type="submit">Check if offers udpated</button>
+          <Button type="submit">Check if offers udpated</Button>
         </form>
       </OfferListContextProvider>
     </>

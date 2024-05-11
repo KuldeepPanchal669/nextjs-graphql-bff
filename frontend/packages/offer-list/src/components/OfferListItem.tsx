@@ -1,7 +1,7 @@
-import { OfferListItem } from "../types/types";
+import { OfferListItemType } from "../types/types";
 
 interface OfferListItemProps {
-  offer: OfferListItem;
+  offer: OfferListItemType;
 }
 const OfferListItem = ({ offer }: OfferListItemProps) => {
   return offer.title;

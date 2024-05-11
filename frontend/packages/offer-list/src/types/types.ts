@@ -1,17 +1,17 @@
-export interface OfferListItem {
+export interface OfferListItemType {
   id: number;
   title: string;
   description: string;
   discount: number;
 }
 
-export interface OfferList {
-  offers: Array<OfferListItem>;
+export interface OfferListType {
+  offers: Array<OfferListItemType>;
   total: number;
   skip: number;
   limit: number;
 }
 
 export interface FetchOfferListResponse {
-  data: OfferList;
+  data: OfferListType;
 }
