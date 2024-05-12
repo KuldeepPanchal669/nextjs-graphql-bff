@@ -1,4 +1,5 @@
 import ExpressConfig from "./express/express.config";
+import { productList } from "./mock/product-list.mock";
 
 const app = ExpressConfig();
 
@@ -32,6 +33,14 @@ app.get("/offers", (request, response) => {
     skip: 0,
     limit: 3,
   });
+});
+
+app.get("/products", async (request, response) => {
+  console.log(request);
+  // const res = await fetch("https://dummyjson.com/products?limit=2")
+  // const data = await res.json();
+  // console.log(productList);
+  response.json(productList)
 });
 
 app.listen(PORT, () => {
