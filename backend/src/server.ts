@@ -8,7 +8,7 @@ const PORT = process.env.port || 5000;
 
 app.get("/offers", (request, response) => {
   console.log(request);
-  console.log("/offers is fetched", new Date());
+  console.log("fetching offer list", new Date());
   setTimeout(() => {
     response.json(offerListMock);
   }, 2000);
@@ -16,6 +16,7 @@ app.get("/offers", (request, response) => {
 
 app.get("/products", (request, response) => {
   console.log(request);
+  console.log("fetching product list", new Date());
   // const res = await fetch("https://dummyjson.com/products?limit=2")
   // const data = await res.json();
   // console.log(productList);
