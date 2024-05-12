@@ -9,7 +9,7 @@ const OfferListWrapper = async () => {
   console.log("OfferListWrapper");
   const checkIfOfferUpdated = async () => {
     "use server";
-    revalidatePath("/offers");
+    revalidatePath("/product-list");
   };
   return (
     <>
