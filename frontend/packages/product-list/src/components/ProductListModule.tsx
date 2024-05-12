@@ -3,6 +3,7 @@ import ProductCard from "./ProductCard";
 
 const ProductListModule = async () => {
   const { products } = await fetchProductList();
+  console.log("ProductListModule");
   return (
     <>
       {products.map((product) => (
